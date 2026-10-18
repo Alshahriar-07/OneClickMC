@@ -1,0 +1,92 @@
+{
+  "name": "oneclickmc",
+  "productName": "OneClickMC",
+  "version": "1.0.0",
+  "description": "OneClickMC — a Minecraft modpack installer for Windows with verified Fabric profiles.",
+  "author": {
+    "name": "OneClickMC",
+    "url": "https://oneclickmc.vercel.app"
+  },
+  "license": "MIT",
+  "private": true,
+  "main": "electron/main.js",
+  "homepage": "https://oneclickmc.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alshahriar-07/OneClickMC"
+  },
+  "scripts": {
+    "start": "electron .",
+    "prestart": "node scripts/check-assets.js",
+    "test": "node --test test/*.test.js",
+    "test:install": "node scripts/e2e-install.js",
+    "lint": "eslint .",
+    "smoke": "electron . --smoke-test",
+    "build": "electron-builder --win --publish never",
+    "build:dir": "electron-builder --win --dir --publish never",
+    "verify:assets": "node scripts/check-assets.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "electron": "44.9.0",
+    "electron-builder": "26.15.3",
+    "eslint": "10.0.0",
+    "globals": "16.4.0"
+  },
+  "build": {
+    "appId": "com.oneclickmc.app",
+    "productName": "OneClickMC",
+    "copyright": "Copyright © 2026 OneClickMC",
+    "asar": true,
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**/*",
+      "app/**/*",
+      "assets/**/*",
+      "data/**/*",
+      "package.json",
+      "!**/*.map"
+    ],
+    "extraMetadata": {
+      "main": "electron/main.js"
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "OneClickMC.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "OneClickMC",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "artifactName": "OneClickMC-Setup.exe",
+      "deleteAppDataOnUninstall": false
+    },
+    "portable": {
+      "artifactName": "OneClickMC.exe"
+    }
+  }
+}

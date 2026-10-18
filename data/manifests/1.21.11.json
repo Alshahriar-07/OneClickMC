@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "minecraft_version": "1.21.11",
+  "loader": "fabric",
+  "loader_label": "Fabric",
+  "reviewed_at": "2026-10-18",
+  "api_provider": "modrinth",
+  "api_base_url": "https://api.modrinth.com/v2",
+  "review_notes": "Live file resolution is performed against the official Modrinth API for Minecraft 1.21.11 + Fabric. The overrides below record components that could not be resolved at review time or that are distributed outside Modrinth.",
+  "overrides": {
+    "modernfix": {
+      "status": "UNAVAILABLE",
+      "reason": "No Fabric build for Minecraft 1.21.11 is published by the project (checked 2026-10-18)."
+    },
+    "eating-animation": {
+      "status": "UNAVAILABLE",
+      "reason": "No Fabric build for Minecraft 1.21.11 is published by the project (checked 2026-10-18)."
+    },
+    "stay-true": {
+      "status": "UNAVAILABLE",
+      "reason": "The Modrinth project page for this pack did not resolve on 2026-10-18. Install it manually if it returns."
+    },
+    "3d-mace": {
+      "status": "UNAVAILABLE",
+      "reason": "No file for Minecraft 1.21.11 is published by the project (checked 2026-10-18)."
+    },
+    "dark-mode-everywhere": {
+      "status": "UNAVAILABLE",
+      "reason": "No file for Minecraft 1.21.11 is published by the project (checked 2026-10-18)."
+    },
+    "derivative": {
+      "status": "UNVERIFIED",
+      "reason": "Distributed on CurseForge. OneClickMC only auto-installs files verified through the Modrinth API."
+    },
+    "iteration-t": {
+      "status": "UNVERIFIED",
+      "reason": "No confirmed official project page or download. OneClickMC will not install it."
+    },
+    "faithful-32x": {
+      "status": "UNVERIFIED",
+      "reason": "Distributed on faithfulpack.net. Download it manually from the official site."
+    },
+    "vanilla-tweaks": {
+      "status": "UNVERIFIED",
+      "reason": "Packs are generated on vanillatweaks.net for your own selections. Not auto-installable."
+    }
+  },
+  "known_conflicts": [
+    {
+      "components": ["distanthorizons", "bliss-shader"],
+      "severity": "warning",
+      "message": "Distant Horizons and Bliss can both load, but terrain LOD may look different under this shader. Expect to tune settings."
+    },
+    {
+      "components": ["distanthorizons", "complementary-unbound"],
+      "severity": "warning",
+      "message": "Distant Horizons with Complementary Unbound works, but shader settings may need adjustment for distant terrain."
+    }
+  ]
+}

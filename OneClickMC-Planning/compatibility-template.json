@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "description": "Template only. Placeholder entries are not verified and must never be installed.",
+  "minecraft_version": "REPLACE_WITH_EXACT_VERSION",
+  "loader": "REPLACE_WITH_VERIFIED_LOADER",
+  "verified_at": null,
+  "components": [
+    {
+      "project_id": "example-placeholder",
+      "name": "Example only — not installable",
+      "category": "mod",
+      "official_project_url": "https://example.invalid/",
+      "official_file_url": null,
+      "official_file_id": null,
+      "minecraft_versions": [],
+      "loader": null,
+      "dependencies": [],
+      "optional": true,
+      "destination": "mods",
+      "sha256": null,
+      "license": null,
+      "redistribution_allowed": false,
+      "status": "UNVERIFIED",
+      "verification_evidence": null,
+      "notes": "Replace with a real, verified record before use."
+    }
+  ]
+}

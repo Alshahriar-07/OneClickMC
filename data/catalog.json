@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "catalog_version": "2026.10.18",
+  "description": "Candidate component catalog for OneClickMC. Edition membership is defined here; per-version manifests record compatibility overrides. Downloadable entries are resolved live from the official Modrinth API for the exact Minecraft version and loader.",
+  "editions": {
+    "potato": {
+      "id": "potato",
+      "name": "Potato",
+      "tagline": "For lower-end PCs",
+      "description": "Performance comes first: optimization mods and lightweight visual touches. Shaders stay optional and off by default.",
+      "bullets": [
+        "Prioritises performance and lower resource use",
+        "Lightweight visual enhancements only",
+        "No shader selected by default",
+        "Smallest download of the three presets"
+      ],
+      "demand": "Lower resource demand",
+      "accent": "green",
+      "recommended": false
+    },
+    "balanced": {
+      "id": "balanced",
+      "name": "Medium",
+      "tagline": "Balanced performance and visual quality",
+      "description": "The recommended default for typical PCs: optimization mods plus moderate, verified visual upgrades.",
+      "bullets": [
+        "Balanced performance and visual quality",
+        "Recommended default for typical PCs",
+        "Moderate shaders and visual packs where verified",
+        "Shaders and packs stay optional"
+      ],
+      "demand": "Moderate resource demand",
+      "accent": "gold",
+      "recommended": true
+    },
+    "ultimate": {
+      "id": "ultimate",
+      "name": "I Paid for My Whole PC",
+      "tagline": "Maximum visual quality",
+      "description": "For powerful PCs: high-quality shaders, high-resolution packs and optional advanced visual features.",
+      "bullets": [
+        "High-quality shader preset selected by default",
+        "Optional high-resolution / PBR texture packs",
+        "Optional advanced features such as Distant Horizons",
+        "Higher resource demand"
+      ],
+      "demand": "Higher resource demand",
+      "accent": "green-gold",
+      "recommended": false
+    }
+  },
+  "selection_defaults": {
+    "potato": { "shader": null, "base_texture": null },
+    "balanced": { "shader": null, "base_texture": null },
+    "ultimate": { "shader": "complementary-unbound", "base_texture": "optimum-realism" }
+  },
+  "components": [
+    {
+      "id": "sodium",
+      "slug": "sodium",
+      "name": "Sodium",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/sodium",
+      "summary": "Modern rendering engine that reduces CPU and GPU overhead.",
+      "editions": { "potato": "required", "balanced": "required", "ultimate": "required" }
+    },
+    {
+      "id": "lithium",
+      "slug": "lithium",
+      "name": "Lithium",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/lithium",
+      "summary": "Game-logic and entity tick optimizations with no visual changes.",
+      "editions": { "potato": "required", "balanced": "required", "ultimate": "required" }
+    },
+    {
+      "id": "ferrite-core",
+      "slug": "ferrite-core",
+      "name": "FerriteCore",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/ferrite-core",
+      "summary": "Reduces memory usage of block and model data.",
+      "editions": { "potato": "required", "balanced": "required", "ultimate": "required" }
+    },
+    {
+      "id": "immediatelyfast",
+      "slug": "immediatelyfast",
+      "name": "ImmediatelyFast",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/immediatelyfast",
+      "summary": "Batches immediate-mode rendering to cut draw-call overhead.",
+      "editions": { "potato": "required", "balanced": "required", "ultimate": "required" }
+    },
+    {
+      "id": "entityculling",
+      "slug": "entityculling",
+      "name": "Entity Culling",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/entityculling",
+      "summary": "Skips rendering entities that are hidden behind geometry.",
+      "editions": { "potato": "required", "balanced": "required", "ultimate": "required" }
+    },
+    {
+      "id": "moreculling",
+      "slug": "moreculling",
+      "name": "More Culling",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/moreculling",
+      "summary": "Adds extra block and item culling rules.",
+      "editions": { "potato": "required", "balanced": "required", "ultimate": "required" }
+    },
+    {
+      "id": "dynamic-fps",
+      "slug": "dynamic-fps",
+      "name": "Dynamic FPS",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/dynamic-fps",
+      "summary": "Lowers resource use while the game window is in the background.",
+      "editions": { "potato": "required", "balanced": "required", "ultimate": "required" }
+    },
+    {
+      "id": "modernfix",
+      "slug": "modernfix",
+      "name": "ModernFix",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/modernfix",
+      "summary": "Startup and memory fixes. No Fabric build is published for the target versions.",
+      "editions": { "potato": "optional", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "fabric-api",
+      "slug": "fabric-api",
+      "name": "Fabric API",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/fabric-api",
+      "summary": "Required runtime library for most Fabric mods.",
+      "editions": { "potato": "required", "balanced": "required", "ultimate": "required" }
+    },
+    {
+      "id": "iris",
+      "slug": "iris",
+      "name": "Iris Shaders",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/iris",
+      "summary": "Shader loader compatible with OptiFine shader packs.",
+      "editions": { "potato": "optional", "balanced": "required", "ultimate": "required" }
+    },
+    {
+      "id": "continuity",
+      "slug": "continuity",
+      "name": "Continuity",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/continuity",
+      "summary": "Connected textures support for resource packs.",
+      "editions": { "potato": "optional", "balanced": "required", "ultimate": "required" }
+    },
+    {
+      "id": "not-enough-animations",
+      "slug": "not-enough-animations",
+      "name": "Not Enough Animations",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/not-enough-animations",
+      "summary": "Adds third-person animations for common player actions.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "3dskinlayers",
+      "slug": "3dskinlayers",
+      "name": "3D Skin Layers",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/3dskinlayers",
+      "summary": "Renders the outer skin layer as real 3D geometry.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "eating-animation",
+      "slug": "eating-animation",
+      "name": "Eating Animation",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/eating-animation",
+      "summary": "Animated eating and drinking. No Fabric build is published for the target versions.",
+      "editions": { "potato": "optional", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "visuality",
+      "slug": "visuality",
+      "name": "Visuality",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/visuality",
+      "summary": "Small particle effects such as block-hit sparks and slime trails.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "distanthorizons",
+      "slug": "distanthorizons",
+      "name": "Distant Horizons",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/distanthorizons",
+      "summary": "Adds level-of-detail terrain far beyond normal render distance.",
+      "caveats": [
+        "Heavy on memory and storage; increase allocated RAM before enabling.",
+        "Shader integration depends on the shader pack; visual differences are expected."
+      ],
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "entity-model-features",
+      "slug": "entity-model-features",
+      "name": "Entity Model Features",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/entity-model-features",
+      "summary": "OptiFine-format entity model support, used by advanced resource packs.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "required" }
+    },
+    {
+      "id": "entitytexturefeatures",
+      "slug": "entitytexturefeatures",
+      "name": "Entity Texture Features",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/entitytexturefeatures",
+      "summary": "OptiFine-format random and emissive entity textures.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "required" }
+    },
+    {
+      "id": "presence-footsteps",
+      "slug": "presence-footsteps",
+      "name": "Presence Footsteps",
+      "category": "mod",
+      "project_url": "https://modrinth.com/mod/presence-footsteps",
+      "summary": "Context-aware footstep sounds based on the block being walked on.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "bsl-shaders",
+      "slug": "bsl-shaders",
+      "name": "BSL Shaders",
+      "category": "shader",
+      "project_url": "https://modrinth.com/shader/bsl-shaders",
+      "summary": "Cinematic lighting, shadows, and water with several quality presets.",
+      "editions": { "potato": "optional", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "sildurs-enhanced-default-shaders",
+      "slug": "sildurs-enhanced-default-shaders",
+      "name": "Sildur's Enhanced Default",
+      "category": "shader",
+      "project_url": "https://modrinth.com/shader/sildurs-enhanced-default-shaders",
+      "summary": "Modest visual upgrade that keeps the vanilla look.",
+      "editions": { "potato": "optional", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "sildurs-basic-shaders",
+      "slug": "sildurs-basic-shaders",
+      "name": "Sildur's Basic Shaders",
+      "category": "shader",
+      "project_url": "https://modrinth.com/shader/sildurs-basic-shaders",
+      "summary": "Lightweight shader with basic shadows and water effects.",
+      "editions": { "potato": "optional", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "makeup-ultra-fast-shaders",
+      "slug": "makeup-ultra-fast-shaders",
+      "name": "MakeUp — Ultra Fast",
+      "category": "shader",
+      "project_url": "https://modrinth.com/shader/makeup-ultra-fast-shaders",
+      "summary": "Shader designed to stay inexpensive on low-end hardware.",
+      "editions": { "potato": "optional", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "complementary-unbound",
+      "slug": "complementary-unbound",
+      "name": "Complementary Unbound",
+      "category": "shader",
+      "project_url": "https://modrinth.com/shader/complementary-unbound",
+      "summary": "Feature-rich shader with configurable quality profiles.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "bliss-shader",
+      "slug": "bliss-shader",
+      "name": "Bliss Shaders",
+      "category": "shader",
+      "project_url": "https://modrinth.com/shader/bliss-shader",
+      "summary": "High-end shader focused on atmospheric lighting and volumetrics.",
+      "caveats": ["High visual load; expected to be heavy on integrated graphics."],
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "solas-shader",
+      "slug": "solas-shader",
+      "name": "Solas Shader",
+      "category": "shader",
+      "project_url": "https://modrinth.com/shader/solas-shader",
+      "summary": "Stylized color grading with soft shadows.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "derivative",
+      "slug": null,
+      "name": "Derivative",
+      "category": "shader",
+      "project_url": "https://www.curseforge.com/minecraft/shaders/derivative-main",
+      "summary": "CurseForge-hosted shader. Not available through the verified Modrinth resolver.",
+      "caveats": ["Manual install only: download it yourself from the official CurseForge page."],
+      "editions": { "potato": "optional", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "iteration-t",
+      "slug": null,
+      "name": "Iteration T",
+      "category": "shader",
+      "project_url": null,
+      "summary": "Candidate shader whose official project identity could not be confirmed.",
+      "caveats": ["No verified official download. OneClickMC will not install this shader."],
+      "editions": { "potato": "optional", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "fresh-animations",
+      "slug": "fresh-animations",
+      "name": "Fresh Animations",
+      "category": "resourcepack",
+      "pack_role": "addon",
+      "project_url": "https://modrinth.com/resourcepack/fresh-animations",
+      "summary": "Expressive entity animations. Best with Entity Model Features and Entity Texture Features.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "stay-true",
+      "slug": null,
+      "name": "Stay True",
+      "category": "resourcepack",
+      "pack_role": "base",
+      "project_url": "https://modrinth.com/resourcepack/stay-true",
+      "summary": "Vanilla-adjacent texture pack. Its Modrinth project could not be resolved at review time.",
+      "caveats": ["Unavailable through the official API on 2026-10-18; install manually if the project returns."],
+      "editions": { "potato": "optional", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "3d-mace",
+      "slug": "3d-mace",
+      "name": "3D Mace",
+      "category": "resourcepack",
+      "pack_role": "addon",
+      "project_url": "https://modrinth.com/resourcepack/3d-mace",
+      "summary": "Adds a 3D model for the mace item.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "better-lanterns",
+      "slug": "better-lanterns",
+      "name": "Better Lanterns",
+      "category": "resourcepack",
+      "pack_role": "addon",
+      "project_url": "https://modrinth.com/project/better-lanterns",
+      "summary": "Improved lantern models and textures.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "better-leaves",
+      "slug": "better-leaves",
+      "name": "Motschen's Better Leaves",
+      "category": "resourcepack",
+      "pack_role": "addon",
+      "project_url": "https://modrinth.com/resourcepack/better-leaves",
+      "summary": "Bushier leaf models with configurable styles.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "dark-mode-everywhere",
+      "slug": "dark-mode-everywhere",
+      "name": "Dark Mode Everywhere",
+      "category": "resourcepack",
+      "pack_role": "addon",
+      "project_url": "https://modrinth.com/resourcepack/dark-mode-everywhere",
+      "summary": "Dark UI textures. No matching file is published for the target versions.",
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "optimum-realism",
+      "slug": "optimum-realism",
+      "name": "Optimum Realism",
+      "category": "resourcepack",
+      "pack_role": "base",
+      "project_url": "https://modrinth.com/resourcepack/optimum-realism",
+      "summary": "High-resolution, PBR-oriented realism textures.",
+      "caveats": ["Requires a large amount of VRAM; check the packet resolution before enabling."],
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "prettyrealistic",
+      "slug": "prettyrealistic",
+      "name": "PrettyRealistic PBR",
+      "category": "resourcepack",
+      "pack_role": "base",
+      "project_url": "https://modrinth.com/resourcepack/prettyrealistic",
+      "summary": "PBR resource pack designed for shader lighting.",
+      "caveats": ["Base texture packs in the same slot override each other; pick one."],
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "faithful-32x",
+      "slug": null,
+      "name": "Faithful 32x",
+      "category": "resourcepack",
+      "pack_role": "base",
+      "project_url": "https://faithfulpack.net/",
+      "summary": "Doubled-resolution vanilla textures. Distributed on its own website.",
+      "caveats": ["Manual install only: download the correct edition from faithfulpack.net."],
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    },
+    {
+      "id": "vanilla-tweaks",
+      "slug": null,
+      "name": "Vanilla Tweaks",
+      "category": "resourcepack",
+      "pack_role": "addon",
+      "project_url": "https://vanillatweaks.net/",
+      "summary": "Build-your-own pack of small vanilla-style tweaks.",
+      "caveats": ["Packs are generated on the website for your selections; no direct file can be resolved."],
+      "editions": { "potato": "off", "balanced": "optional", "ultimate": "optional" }
+    }
+  ]
+}
